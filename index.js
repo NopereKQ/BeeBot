@@ -1,7 +1,7 @@
 require('dotenv').config();
 const Discord = require('discord.js');
 const bot = new Discord.Client();
-
+const prefix = "!";
 const TOKEN = process.env.TOKEN;
 
 bot.on('ready', () => {
@@ -9,8 +9,8 @@ bot.on('ready', () => {
 })
 
 bot.on('message', msg => {
-    if (msg.content === "siema") {
-        msg.reply('Sieeemano witam w mojej kuchni!');
+    if (msg.content === `${prefix}help`) {
+        msg.reply('BeeBot!');
     }
 })
 
